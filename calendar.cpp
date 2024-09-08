@@ -3,6 +3,7 @@
 #include <cmath>
 
 // календарик
+// another comment
 
 int main(int argc, char **argv) {
 	int startDay, monthCount;
