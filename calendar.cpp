@@ -2,6 +2,8 @@
 #include <string>
 #include <cmath>
 
+// календарик
+
 int main() {
 	int startDay, monthCount;
 
