@@ -2,7 +2,7 @@
 #include <string>
 #include <cmath>
 
-int main() {
+int main(int argc, char **argv) {
 	int startDay, monthCount;
 
     std::cin >> startDay >> monthCount;
@@ -14,8 +14,26 @@ int main() {
         startDay -= 7;
     }
 
+    std::string daysMsg {};
     std::string res {};
-    std::cout << "Пн Вт Ср Чт Пт Сб Вс" << std::endl;
+
+    std::string loc {};
+    if (argc == 1) {
+        loc = "--ru";
+    } else {
+        loc = argv[1];
+    }
+
+    if (loc == "--ru")
+    {
+        daysMsg = "Пн Вт Ср Чт Пт Сб Вс";
+    } else if (loc == "--en") {
+        daysMsg = "Mn Tu We Th Fr St Su";
+    }
+
+    std::cout << daysMsg << std::endl;
+    
+    
     for (int i = 0; i < (monthCount+startDay-1); i++) {
         std::string day;
         
